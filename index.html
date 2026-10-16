@@ -1,0 +1,300 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pwin.lol</title>
+  <meta name="description" content="a little corner of the internet belonging to pwin.">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #090909;
+      color: #e9e9e9;
+      font-family: "Courier New", monospace;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    a {
+      color: #b7a5ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: white;
+      text-decoration: underline;
+    }
+
+    .page {
+      width: min(760px, 90%);
+      margin: 65px auto;
+    }
+
+    header {
+      padding-bottom: 24px;
+      border-bottom: 1px solid #292929;
+      margin-bottom: 30px;
+    }
+
+    .logo {
+      font-size: clamp(42px, 10vw, 76px);
+      font-weight: bold;
+      letter-spacing: -5px;
+      margin: 0;
+    }
+
+    .subtitle {
+      color: #858585;
+      margin-top: 0;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 25px;
+    }
+
+    .intro {
+      color: #bdbdbd;
+      margin-bottom: 36px;
+    }
+
+    .section-title {
+      color: #888;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    .message {
+      background: #101010;
+      border: 1px solid #292929;
+      padding: 20px;
+      margin: 14px 0;
+      border-radius: 5px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .message:hover {
+      border-color: #8e7bd4;
+      transform: translateY(-2px);
+    }
+
+    .tag {
+      color: #a995ff;
+      font-size: 11px;
+      margin-bottom: 10px;
+    }
+
+    .quote {
+      font-size: 16px;
+      color: #f2f2f2;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+
+    .caption {
+      color: #777;
+      font-size: 12px;
+      margin-bottom: 0;
+    }
+
+    .controls {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 18px 0 25px;
+    }
+
+    input, button {
+      font: inherit;
+      background: #111;
+      color: #eee;
+      border: 1px solid #333;
+      padding: 10px 12px;
+      border-radius: 4px;
+    }
+
+    input {
+      flex: 1;
+      min-width: 170px;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    button:hover {
+      border-color: #b7a5ff;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .empty {
+      color: #777;
+      padding: 20px 0;
+    }
+
+    footer {
+      color: #686868;
+      border-top: 1px solid #292929;
+      padding-top: 20px;
+      margin-top: 55px;
+      font-size: 12px;
+    }
+
+    @media (max-width: 500px) {
+      .page {
+        margin-top: 35px;
+      }
+
+      .logo {
+        letter-spacing: -3px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <header>
+      <h1 class="logo">pwin<span style="color:#a995ff">.</span></h1>
+      <p class="subtitle">an archive of questionable behavior.</p>
+
+      <nav>
+        <a href="#home">home</a>
+        <a href="#texts">texts</a>
+        <a href="#about">about</a>
+      </nav>
+    </header>
+
+    <section id="home" class="intro">
+      <p>hi. welcome to my little corner of the internet.</p>
+      <p>
+        a collection of things i've said, things i've seen,
+        and things that should probably stay between me and god.
+      </p>
+      <p style="color:#a995ff">★ you are visitor number: who knows</p>
+    </section>
+
+    <section id="texts">
+      <div class="section-title">// the evidence folder</div>
+
+      <div class="controls">
+        <input
+          type="search"
+          id="search"
+          placeholder="search the archive..."
+          aria-label="Search messages"
+        >
+        <button id="randomButton">random text ↗</button>
+      </div>
+
+      <div id="messageList">
+        <!-- ADD YOUR OWN MESSAGES BELOW -->
+        <!-- Copy a message card to add another entry. -->
+
+        <article class="message">
+          <div class="tag">ENTRY 001 / OUT OF CONTEXT</div>
+          <div class="quote">replace this with something funny you've said.</div>
+          <p class="caption">context unavailable. unfortunately.</p>
+        </article>
+
+        <article class="message">
+          <div class="tag">ENTRY 002 / QUESTIONABLE</div>
+          <div class="quote">i should not be allowed to have a phone.</div>
+          <p class="caption">another incident has been documented.</p>
+        </article>
+
+        <article class="message">
+          <div class="tag">ENTRY 003 / LATE NIGHT</div>
+          <div class="quote">this seemed like a good idea at the time.</div>
+          <p class="caption">it was, in fact, not a good idea.</p>
+        </article>
+      </div>
+
+      <p id="emptyMessage" class="empty hidden">
+        nothing here. try another search.
+      </p>
+    </section>
+
+    <section id="about" style="margin-top:50px">
+      <div class="section-title">// about this place</div>
+      <p>
+        this website exists because the group chat
+        deserves a permanent historical record.
+      </p>
+      <p style="color:#777">
+        owned by pwin. powered by poor decisions.
+      </p>
+    </section>
+
+    <footer>
+      <p>pwin.lol © 2026</p>
+      <p>made with questionable judgment.</p>
+      <a href="#home">back to top ↑</a>
+    </footer>
+  </main>
+
+  <script>
+    const search = document.getElementById("search");
+    const messages = Array.from(
+      document.querySelectorAll(".message")
+    );
+    const randomButton = document.getElementById("randomButton");
+    const emptyMessage = document.getElementById("emptyMessage");
+
+    function filterMessages() {
+      const query = search.value.toLowerCase().trim();
+      let visible = 0;
+
+      messages.forEach((message) => {
+        const matches = message.textContent
+          .toLowerCase()
+          .includes(query);
+
+        message.classList.toggle("hidden", !matches);
+        if (matches) visible++;
+      });
+
+      emptyMessage.classList.toggle("hidden", visible > 0);
+    }
+
+    search.addEventListener("input", filterMessages);
+
+    randomButton.addEventListener("click", () => {
+      const visibleMessages = messages.filter(
+        (message) => !message.classList.contains("hidden")
+      );
+
+      if (visibleMessages.length === 0) return;
+
+      const chosen = visibleMessages[
+        Math.floor(Math.random() * visibleMessages.length)
+      ];
+
+      chosen.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+      });
+
+      chosen.animate(
+        [
+          { borderColor: "#a995ff" },
+          { borderColor: "#292929" }
+        ],
+        { duration: 1000 }
+      );
+    });
+  </script>
+</body>
+</html>
